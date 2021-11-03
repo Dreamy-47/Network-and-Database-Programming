@@ -1,0 +1,11 @@
+ 1) ATK
+ 2) ATK%
+ 3) DEF
+ 4) DEF%
+ 5) HP
+ 6) HP%
+ 7) Speed
+ 8) Crit chance
+ 9) Crit damage
+ 10) Effectiveness
+ 11) Effect Resistance
