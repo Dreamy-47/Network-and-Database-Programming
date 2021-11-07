@@ -19,6 +19,7 @@ def add_E():
     total_value=0
     gear = 0
     while(True):
+        print("Select type of gear:")
         print(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "gear_menu.txt")).read())
         print('-'*17)
         gear = int(input("> ")[0])-1
@@ -77,7 +78,17 @@ def show_E():
     db_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "EquipSystem.db")
     con = lite.connect(db_path)
     cur=con.cursor()
-    command = "select * from equip"
+    print("choose one:")
+    print(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "gear_menu.txt")).read())
+    print(" 7) all")
+    opt = int(input("> ")[0])
+    print('-'*17)
+    command = ""
+    if opt != 7 :
+        command = f"select * from equip where gear = '{Gear_name[opt-1]}'"
+        #print (command)
+    else:
+        command = "select * from equip"
     gear_list = cur.execute(command) 
     for row in gear_list:
         print("ID:",row[0])

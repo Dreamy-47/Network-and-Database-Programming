@@ -1,4 +1,3 @@
-Select type of gear:
  1) Weapon
  2) Helmet
  3) Armor
